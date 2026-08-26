@@ -1,0 +1,23 @@
+[project]
+name = "web-security-header-scanner"
+version = "0.1.0"
+description = "Audit HTTP security headers of a URL and score them."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "T-X" }]
+dependencies = ["requests>=2.31.0"]
+
+[project.scripts]
+web-security-header-scanner = "web_security_header_scanner:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["web_security_header_scanner"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
